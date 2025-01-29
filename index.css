@@ -1,0 +1,173 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.buttonWho, .buttonFlavours, .buttonContact {
+    background-color: wheat;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px; /* Add some margin between buttons */
+    cursor: pointer;
+    border-radius: 16px; /* Adjust to match the pill shape */
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* Adjust for text size */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    z-index: 10; /* Ensure buttons are on top */
+}
+
+.buttonWho:hover, .buttonFlavours:hover, .buttonContact:hover {
+    background-color: peru;
+    padding-right: 25px;
+}
+
+.buttonContact, .buttonWho, .buttonFlavours span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.buttonWho span:after {
+/*    content: '\26FA'; /* Smiley face */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonFlavours span:after {
+/*    content: '\2615'; /* Hot beverage */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonContact span:after {
+/*    content: '\260E'; /* Telephone */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonWho:hover span:after,
+.buttonFlavours:hover span:after,
+.buttonContact:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.buttonContact:hover, .buttonWho:hover, .buttonFlavours:hover span {
+    padding-right: 25px;
+    transform: scale(1.1);
+}
+  
+  .buttonContact:hover, .buttonWho:hover, .buttonFlavours:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+.flavor-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.flavor-dot:nth-child(1) {
+    bottom: 10px; /* Increased spacing */
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(2) {
+    bottom: 5px; /* Increased spacing */
+    left: 70%; /* Adjusted position */
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(3) {
+    bottom: 27px; /* Increased spacing */
+    left: 30%; /* Adjusted position */
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(4) {
+    bottom: 18px; /* Increased spacing */
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(5) {
+    bottom: 35px; /* Increased spacing */
+    left: 20%; /* Adjusted position */
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(6) {
+    bottom: 25px; /* Increased spacing */
+    left: 90%; /* Adjusted position */
+    transform: translateX(-50%);
+}
+
+.flavor-dot:nth-child(7) {
+    bottom: 15px; /* Increased spacing */
+    left: 10%; /* Adjusted position */
+    transform: translateX(-50%);
+}
+
+.paper-bite {
+    position: absolute;
+    top: -50px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: fall linear forwards;
+}
+
+.flavor-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
