@@ -21,6 +21,7 @@ const dotColors = {
     "Tomato": "darkred"
 };
 
+// the paaper bite(s)
 function createPaperBite() {
     const bite = document.createElement("div");
     bite.classList.add("paper-bite");
@@ -58,9 +59,9 @@ function createPaperBite() {
 
     document.body.appendChild(bite);
 
-    // Remove from the DOM after animation ends
+    // Remove after animation ends
     setTimeout(() => bite.remove(), 13000);
 }
 
-// Generate paper bites every 1500ms
+// Generate paaper bites
 setInterval(createPaperBite, 1500);

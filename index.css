@@ -22,7 +22,8 @@ body {
     cursor: pointer;
     border-radius: 16px; /* Adjust to match the pill shape */
     font-family: Arial, sans-serif;
-    font-size: 14px; /* Adjust for text size */
+    font-size: 20px; /* Adjust for text size */
+    font-style: bold;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
     z-index: 10; /* Ensure buttons are on top */
 }
@@ -93,7 +94,7 @@ body {
 
 .flavor-dot:nth-child(1) {
     bottom: 10px; /* Increased spacing */
-    left: 45%;
+    left: 45%; /* Adjusted position */
     transform: translateX(-50%);
 }
 
@@ -111,7 +112,7 @@ body {
 
 .flavor-dot:nth-child(4) {
     bottom: 18px; /* Increased spacing */
-    left: 80%;
+    left: 80%; /* Adjusted position */
     transform: translateX(-50%);
 }
 
