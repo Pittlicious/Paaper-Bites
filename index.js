@@ -13,18 +13,19 @@ const flavorColors = {
 
 const dotColors = {
     "Sour Cream": "darkgreen",
-    "Spring Onion": "yellow",
+    "Spring Onion": "beige",
     "Salt & Vinegar": "white",
     "Fruit Chutney": "purple",
     "Mexican": "black",
     "Sweet Chilli": "orange",
-    "Tomato": "darkred"
+    "Tomato": "darkred",
+    "Pizza": "yellow"
 };
 
 // the paaper bite(s)
 function createPaperBite() {
     const bite = document.createElement("div");
-    bite.classList.add("paper-bite");
+    bite.classList.add("paper-biteSquare");
     bite.style.left = Math.random() * window.innerWidth + "px";
     bite.style.animationDuration = (Math.random() * 12 + 9) + "s"; // Falls in 9s - 21s
 
@@ -65,3 +66,36 @@ function createPaperBite() {
 
 // Generate paaper bites
 setInterval(createPaperBite, 1500);
+
+const buttons = document.querySelectorAll(".buttonWho, .buttonFlavours, .buttonContact");
+
+// Hide all info divs initially
+document.querySelectorAll(".info").forEach(info => info.style.display = "none");
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const isExpanded = button.classList.contains('expanded');
+
+        // Reset all buttons and hide all info sections
+        buttons.forEach(btn => {
+            btn.classList.remove('expanded');
+            btn.style.transform = 'translateX(0)';
+            btn.querySelector('.info').style.display = 'none';
+        });
+
+        if (!isExpanded) {
+            button.classList.add('expanded');
+            button.querySelector('.info').style.display = 'block'; // Show info
+
+            // Adjust spacing
+            const index = Array.from(buttons).indexOf(button);
+            buttons.forEach((btn, i) => {
+                if (i < index) {
+                    btn.style.transform = 'translateX(-160px)';
+                } else if (i > index) {
+                    btn.style.transform = 'translateX(160px)';
+                }
+            });
+        }
+    });
+});
