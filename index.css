@@ -1,4 +1,6 @@
 body {
+    background-image: url(Images/background1.jpg);
+    background-size: cover;
     background-color: #1a1a1a;
     color: white;
     font-family: Arial, sans-serif;
@@ -84,6 +86,17 @@ body {
     right: 0;
   }
 
+  .info {
+    display: none; /* Hide by default */
+    background-color: white(255, 255, 255, 0.9);
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
 
 .flavor-dot {
     width: 5px;
@@ -116,25 +129,7 @@ body {
     transform: translateX(-50%);
 }
 
-.flavor-dot:nth-child(5) {
-    bottom: 35px; /* Increased spacing */
-    left: 20%; /* Adjusted position */
-    transform: translateX(-50%);
-}
-
-.flavor-dot:nth-child(6) {
-    bottom: 25px; /* Increased spacing */
-    left: 90%; /* Adjusted position */
-    transform: translateX(-50%);
-}
-
-.flavor-dot:nth-child(7) {
-    bottom: 15px; /* Increased spacing */
-    left: 10%; /* Adjusted position */
-    transform: translateX(-50%);
-}
-
-.paper-bite {
+.paper-biteSquare {
     position: absolute;
     top: -50px;
     width: 40px;
