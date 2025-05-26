@@ -36,6 +36,8 @@ body {
 }
 
 .buttonContact, .buttonWho, .buttonFlavours span {
+    transition: transform 0.10s cubic-bezier(0.4, 0, 0.2, 1),
+                width 0.10s cubic-bezier(.4, 0, 0.2, 1);
     cursor: pointer;
     display: inline-block;
     position: relative;
